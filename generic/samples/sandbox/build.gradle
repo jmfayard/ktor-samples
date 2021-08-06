@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:_"
     }
 }
 
@@ -23,55 +23,55 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation Kotlin.stdlib.jdk8
 
-    implementation "io.ktor:ktor-auth-jwt:$ktor_version"
-    implementation "io.ktor:ktor-auth-ldap:$ktor_version"
-    implementation "io.ktor:ktor-auth:$ktor_version"
-    implementation "io.ktor:ktor-client-apache:$ktor_version"
-    implementation "io.ktor:ktor-client-auth-basic:$ktor_version"
-    implementation "io.ktor:ktor-client-cio:$ktor_version"
-    implementation "io.ktor:ktor-client-core:$ktor_version"
-    implementation "io.ktor:ktor-client-features:$ktor_version"
-    implementation "io.ktor:ktor-client-jetty:$ktor_version"
-    implementation "io.ktor:ktor-client-gson:$ktor_version"
-    //compile "io.ktor:ktor-client-jvm:$ktor_version" // Not in 0.9.2
-    implementation "io.ktor:ktor-client-tests:$ktor_version"
-    implementation "io.ktor:ktor-client-websockets:$ktor_version"
-    implementation "io.ktor:ktor-client:$ktor_version"
-    implementation "io.ktor:ktor-features:$ktor_version"
-    implementation "io.ktor:ktor-freemarker:$ktor_version"
-    implementation "io.ktor:ktor-gson:$ktor_version"
-    implementation "io.ktor:ktor-html-builder:$ktor_version"
-    implementation "io.ktor:ktor-http-cio:$ktor_version"
-    implementation "io.ktor:ktor-http:$ktor_version"
-    implementation "io.ktor:ktor-jackson:$ktor_version"
-    implementation "io.ktor:ktor-locations:$ktor_version"
-    implementation "io.ktor:ktor-metrics:$ktor_version"
-    implementation "io.ktor:ktor-network-tls:$ktor_version"
-    implementation "io.ktor:ktor-network:$ktor_version"
-    implementation "io.ktor:ktor-server-cio:$ktor_version"
-    implementation "io.ktor:ktor-server-core:$ktor_version"
-    implementation "io.ktor:ktor-server-host-common:$ktor_version"
-    implementation "io.ktor:ktor-server-jetty:$ktor_version"
-    implementation "io.ktor:ktor-server-netty:$ktor_version"
-    implementation "io.ktor:ktor-server-servlet:$ktor_version"
-    implementation "io.ktor:ktor-server-sessions:$ktor_version"
-    implementation "io.ktor:ktor-server-test-host:$ktor_version"
-    implementation "io.ktor:ktor-server-tests:$ktor_version"
-    implementation "io.ktor:ktor-server-tomcat:$ktor_version"
-    implementation "io.ktor:ktor-server:$ktor_version"
-    implementation "io.ktor:ktor-utils:$ktor_version"
-    implementation "io.ktor:ktor-velocity:$ktor_version"
-    implementation "io.ktor:ktor-websockets:$ktor_version"
-    implementation "io.ktor:ktor:$ktor_version"
+    implementation Ktor.features.authJwt
+    implementation Ktor.features.authLdap
+    implementation Ktor.features.auth
+    implementation Ktor.client.apache
+    implementation Ktor.client.authBasic
+    implementation Ktor.client.cio
+    implementation Ktor.client.core
+    implementation "io.ktor:ktor-client-features:_"
+    implementation Ktor.client.jetty
+    implementation "io.ktor:ktor-client-gson:_"
+    //compile "io.ktor:ktor-client-jvm:_" // Not in 0.9.2
+    implementation Ktor.client.tests
+    implementation Ktor.client.websockets
+    implementation "io.ktor:ktor-client:_"
+    implementation "io.ktor:ktor-features:_"
+    implementation Ktor.features.freemarker
+    implementation Ktor.features.gson
+    implementation Ktor.features.htmlBuilder
+    implementation Ktor.httpCio
+    implementation Ktor.http
+    implementation Ktor.features.jackson
+    implementation Ktor.features.locations
+    implementation Ktor.features.metrics
+    implementation Ktor.network.tls
+    implementation Ktor.network.network
+    implementation "io.ktor:ktor-server-cio:_"
+    implementation Ktor.server.core
+    implementation "io.ktor:ktor-server-host-common:_"
+    implementation Ktor.server.jetty
+    implementation Ktor.server.netty
+    implementation Ktor.server.servlet
+    implementation Ktor.features.serverSessions
+    implementation Ktor.server.testHost
+    implementation "io.ktor:ktor-server-tests:_"
+    implementation Ktor.server.tomcat
+    implementation "io.ktor:ktor-server:_"
+    implementation Ktor.utils
+    implementation Ktor.features.velocity
+    implementation "io.ktor:ktor-websockets:_"
+    implementation "io.ktor:ktor:_"
 
-    implementation "ch.qos.logback:logback-classic:$logback_version"
-    implementation "org.ehcache:ehcache:3.0.0.m4"
-    implementation "com.google.code.gson:gson:2.7"
+    implementation "ch.qos.logback:logback-classic:_"
+    implementation "org.ehcache:ehcache:_"
+    implementation "com.google.code.gson:gson:_"
 
-    testImplementation "io.ktor:ktor-server-test-host:$ktor_version"
+    testImplementation Ktor.server.testHost
 
-    testImplementation "io.mockk:mockk:$mockk_version"
+    testImplementation Testing.mockK
 }
 

@@ -25,9 +25,9 @@ kotlin {
     sourceSets {
         commonMain {
             dependencies {
-                implementation "io.ktor:ktor-client-curl:$ktor_version"
-                implementation "io.ktor:ktor-client-core:$ktor_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines_version"
+                implementation Ktor.client.curl
+                implementation Ktor.client.core
+                implementation KotlinX.coroutines.core
             }
         }
     }

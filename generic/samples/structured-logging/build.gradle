@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:_"
     }
 }
 
@@ -23,13 +23,13 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "io.ktor:ktor-server-netty:$ktor_version"
-    implementation "io.ktor:ktor-html-builder:$ktor_version"
-    implementation "ch.qos.logback:logback-classic:$logback_version"
-    implementation "net.logstash.logback:logstash-logback-encoder:5.1"
+    implementation Kotlin.stdlib.jdk8
+    implementation Ktor.server.netty
+    implementation Ktor.features.htmlBuilder
+    implementation "ch.qos.logback:logback-classic:_"
+    implementation "net.logstash.logback:logstash-logback-encoder:_"
 
-    implementation "org.jetbrains:kotlin-css-jvm:1.0.0-pre.151-kotlin-1.4.32"
-    testImplementation "io.ktor:ktor-server-tests:$ktor_version"
+    implementation "org.jetbrains:kotlin-css-jvm:_"
+    testImplementation "io.ktor:ktor-server-tests:_"
 }
 

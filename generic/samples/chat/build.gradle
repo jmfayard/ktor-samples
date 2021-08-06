@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:_"
     }
 }
 
@@ -38,25 +38,25 @@ kotlin {
     sourceSets {
         backendMain {
             dependencies {
-                implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-                implementation "io.ktor:ktor-server-netty:$ktor_version"
-                implementation "io.ktor:ktor-websockets:$ktor_version"
-                implementation "ch.qos.logback:logback-classic:$logback_version"
+                implementation Kotlin.stdlib.jdk8
+                implementation Ktor.server.netty
+                implementation "io.ktor:ktor-websockets:_"
+                implementation "ch.qos.logback:logback-classic:_"
             }
         }
 
         backendTest {
             dependencies {
-                implementation "io.ktor:ktor-server-test-host:$ktor_version"
+                implementation Ktor.server.testHost
             }
         }
 
         frontendMain {
             dependencies {
                 implementation "org.jetbrains.kotlin:kotlin-stdlib-js"
-                implementation "io.ktor:ktor-client-websockets:$ktor_version"
-                implementation "io.ktor:ktor-client-js:$ktor_version"
-                implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$kotlinx_coroutines_version"
+                implementation Ktor.client.websockets
+                implementation "io.ktor:ktor-client-js:_"
+                implementation KotlinX.coroutines.coreJs
             }
         }
     }

@@ -7,7 +7,7 @@ buildscript {
         gradlePluginPortal()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:_"
     }
 }
 
@@ -28,13 +28,13 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "io.ktor:ktor-server-netty:$ktor_version"
-    implementation "io.ktor:ktor-client-apache:$ktor_version"
-    implementation "io.ktor:ktor-html-builder:$ktor_version"
-    implementation "io.ktor:ktor-websockets:$ktor_version"
-    implementation "io.ktor:ktor-client-cio:$ktor_version"
-    implementation "io.ktor:ktor-client-websockets:$ktor_version"
-    implementation "ch.qos.logback:logback-classic:$logback_version"
+    implementation Kotlin.stdlib.jdk8
+    implementation Ktor.server.netty
+    implementation Ktor.client.apache
+    implementation Ktor.features.htmlBuilder
+    implementation "io.ktor:ktor-websockets:_"
+    implementation Ktor.client.cio
+    implementation Ktor.client.websockets
+    implementation "ch.qos.logback:logback-classic:_"
 }
 

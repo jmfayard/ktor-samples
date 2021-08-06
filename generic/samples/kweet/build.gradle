@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:_"
     }
 }
 
@@ -23,23 +23,23 @@ repositories {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation "io.ktor:ktor-server-netty:$ktor_version"
-    implementation "io.ktor:ktor-freemarker:$ktor_version"
-    implementation "io.ktor:ktor-locations:$ktor_version"
-    implementation "ch.qos.logback:logback-classic:$logback_version"
-    implementation "com.h2database:h2:1.4.191"
-    implementation "com.mchange:c3p0:0.9.5.2"
-    implementation("org.jetbrains.exposed:exposed:0.17.13") {
+    implementation Kotlin.stdlib.jdk8
+    implementation Ktor.server.netty
+    implementation Ktor.features.freemarker
+    implementation Ktor.features.locations
+    implementation "ch.qos.logback:logback-classic:_"
+    implementation "com.h2database:h2:_"
+    implementation "com.mchange:c3p0:_"
+    implementation("org.jetbrains.exposed:exposed:_") {
         exclude(module: 'log4j')
         exclude(module: 'slf4j-log4j12')
         exclude(module: 'kotlin-stdlib')
     }
-    implementation "joda-time:joda-time:2.9.2"
-    implementation "org.freemarker:freemarker:2.3.23"
-    implementation "org.ehcache:ehcache:3.0.0.m4"
-    testImplementation "io.ktor:ktor-server-test-host:$ktor_version"
-    testImplementation "io.mockk:mockk:$mockk_version"
+    implementation "joda-time:joda-time:_"
+    implementation "org.freemarker:freemarker:_"
+    implementation "org.ehcache:ehcache:_"
+    testImplementation Ktor.server.testHost
+    testImplementation Testing.mockK
     testImplementation "org.jetbrains.kotlin:kotlin-test"
 }
 
